@@ -6,12 +6,15 @@
 	
 	<body>
 		<h1>Smart woman</h1>
-		<form method = "POST" action = "">
+		<font color = "red"><b> {{ error_message }}</b></font>
+		<br><br>
+		<form method = "POST" action = "/login_success">
 			<input type = "text" name = "account_username" placeholder = "Введите ваше имя" />
 			<br/><br/>
-			<input type = "passwod" name = "account_password" placeholder = "Введите ваш пароль" />
+			<input type = "password" name = "account_password" placeholder = "Введите ваш пароль" />
 			<br/><br/>
 			<input type = "submit"/>
+			{% csrf_token %}
 		</form>
 	<body>
 </html>

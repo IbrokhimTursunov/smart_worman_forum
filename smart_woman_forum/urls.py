@@ -18,8 +18,9 @@ from django.urls import path, include
 import posts.views
 
 urlpatterns = [
-    path(r'logon', posts.views.logon_func),
-    path(r'new', posts.views.new_user_func),
-    path(r'create', posts.views.new_user_create_func),
-    path(r'myadmin', include(admin.site.urls)),
+    path(r'login', posts.views.login_func),
+    path(r'login_success', posts.views.login_func_success),
+    path(r'new_user', posts.views.new_user_func),
+    path(r'new_user_success', posts.views.new_user_create_func),
+    path(r'admin', admin.site.urls),
 ]
